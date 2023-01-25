@@ -15,12 +15,15 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 1rem 1rem;
-    text-decoration: none;
 }
 
 ul li {
     margin: 2rem;
     list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
 }
 
 .foto {
