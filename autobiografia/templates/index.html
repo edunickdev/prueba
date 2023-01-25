@@ -1,0 +1,20 @@
+{% extends './layouts/base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h2>Eduard Nicolás Sarmiento Herrera</h2>
+        </div>
+        <div class="row">
+            <img src="{% static './src/Foto Actualizado.jpg' %}" alt="edunickdev" class="foto my-3">
+        </div>
+        <div class="row text-center my-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem maxime minima minus, nemo quidem recusandae repellat reprehenderit similique vero. Accusantium aliquid aperiam deserunt dignissimos eius explicabo in placeat quos repellendus!</p>
+        </div>
+    </div>
+{% endblock %}
