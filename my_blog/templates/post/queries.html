@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consultas - Queries</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <h3>Buscando autor por email especifico</h3>
+    <ul>
+        {% for filter in filtered %}
+            <li>{{ filter.name }} | {{ filter.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Obteniendo un unico elemento filtrado por id</h1>
+    <p>el autor buscado es {{ unique.email }}
+
+    <h2>obteniendo un rango, en este caso los 10 primeros</h2>
+        <ol>
+            {% for limite in limitado %}
+                <li>{{ limite.email }}</li>
+            {% endfor %}
+        </ol>
+
+    <h2>obteniendo los autores del 5 al 10</h2>
+    <ul>
+        {% for offset in offsets %}
+            <li>{{ offset.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3> Todos los autores</h3>
+    <ul>
+        {% for author in authors %}
+            <li>{{ author.name }} ({{ author.email }})</li>
+        {% endfor %}
+    </ul>
+    <h2>Total de autores {{ authors|length }}</h2>
+
+
+    <h2>Ordenar email por orden alfabético</h2>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Filtro aplicando menor o igual que 15 en el campo id</h2>
+    <ul>
+        {% for num in date %}
+            <li>{{ num.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Aplicando filtro por contenidos</h2>
+    <ul>
+        {% for data in content %}
+            <li>{{ data.name }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
